@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/css/style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="banner">
+        <h1>
+            Ninja Gold
+        </h1>
+    </div>
+    <div class="main">
+        <div class="topbar">
+            <h3>
+                Your gold: {{request.session.gold}}
+            </h3>
+            <a class="startover" name="startover" href="/start_over">Start Over</a>
+        </div>
+        <div class="container">
+            <div class="activity">
+                <form action="/process_money">
+                    <h2>Farm</h2>
+                    <p>Earn 10-20 gold</p>
+                    <input name="farm" type="submit" class="button" value="Work the land!">
+                    <input type="hidden" name="which_form" value="farm">
+                </form>
+            </div>
+            <div class="activity">
+                <form action="/process_money">
+                    <h2>Cave</h2>
+                    <p>Earn 5-10 gold</p>
+                    <input name="cave" type="submit" class="button" value="Plunder nature!">
+                    <input type="hidden" name="which_form" value="cave">
+                </form>
+            </div>
+            <div class="activity">
+                <form action="/process_money">
+                    <h2>House</h2>
+                    <p>Earn 2-5 gold</p>
+                    <input name="house" type="submit" class="button" value="Search for loose change!">
+                    <input type="hidden" name="which_form" value="house">
+                </form>
+            </div>
+            <div class="activity">
+                <form action="/process_money">
+                    <h2>Casino</h2>
+                    <p>Earn or lose up to 50 gold</p>
+                    <input name="casino" type="submit" class="button" value="Gamble it all!">
+                    <input type="hidden" name="which_form" value="casino">
+                </form>
+            </div>
+        </div>
+        <div class="container">
+            <div class="log">
+                {% for x in request.session.log %}
+                <p class="entry">{{x}}</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

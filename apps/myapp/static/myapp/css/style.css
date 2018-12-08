@@ -1,0 +1,100 @@
+* {
+    font-family: Helvetica, sans-serif;
+    margin: 0px auto;
+}
+
+.banner {
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(rgb(182, 182, 182), rgb(233, 233, 233))
+}
+.banner h1 {
+    color: rgb(39, 39, 39);
+    margin: auto;
+    font-size: 48px;
+    text-shadow: 1px 1px 1px black;
+}
+.topbar {
+    height: 50px;
+    background-image: linear-gradient(rgb(233, 233, 233), rgb(182, 182, 182));
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 0px;
+    box-shadow: 0px 0px 2px 2px grey;
+}
+.startover {
+    border: 1px solid rgb(75, 75, 75);
+    padding: 5px;
+    border-radius: 3px;
+    background-image: inherit;
+    text-decoration: none;
+    box-shadow: 1px 1px 1px rgb(124, 124, 124);
+    color: rgb(40, 40, 40);
+    font-size: 14px;
+    margin: auto 10px auto 0px;
+}
+h3 {
+    margin: auto 0px auto 10px;
+    color: rgb(39, 39, 39)
+}
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 40px 60px
+}
+.activity {
+    border: 2px solid rgb(54, 54, 54);
+    border-radius: 5px;
+    width: 22%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 200px;
+    background-image: linear-gradient(to bottom right, rgb(228, 228, 228), rgb(248, 248, 248));
+    box-shadow: 2px 2px 1px grey;
+}
+h2 {
+    text-align: center;
+    color: rgb(41, 41, 41)
+}
+p {
+    text-align: center;
+    margin-top: 20px;
+    color: rgb(41, 41, 41)
+}
+.button {
+    margin: 20px auto 0px auto;
+    color: rgb(27, 27, 27);
+    display: block;
+    height: 40px;
+    border-radius: 3px;
+    font-size: 14px;
+    box-shadow: 1px 1px 1px rgb(65, 64, 64);
+    width: auto;
+    border: 1px solid rgb(75, 75, 75);
+    background-image: linear-gradient(rgb(233, 233, 233), rgb(182, 182, 182));
+}
+.log {
+    margin-top: 20px;
+    width: 97%;
+    border: 2px solid rgb(50, 50, 50);
+    box-shadow: 2px 2px 1px grey;
+    border-radius: 5px;
+    height: 250px;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom left, rgb(228, 228, 228), rgb(248, 248, 248))
+}
+.entry {
+    text-align: left;
+    margin-left: 20px;
+}
+.pass {
+    color: green;
+}
+.fail {
+    color: red;
+}
